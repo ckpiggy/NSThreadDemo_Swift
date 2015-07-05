@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NSThreadDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$counter1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARY-IF-Xr8">
+                                <rect key="frame" x="0.0" y="20" width="300" height="280"/>
+                                <color key="backgroundColor" red="0.69601148499999999" green="1" blue="0.78576537030000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$counter2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pf5-Yy-oM8">
+                                <rect key="frame" x="300" y="20" width="300" height="280"/>
+                                <color key="backgroundColor" red="0.42685545079999998" green="0.75038599120000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVZ-a3-vTN">
+                                <rect key="frame" x="422" y="350" width="57" height="30"/>
+                                <state key="normal" title="Thread2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="thread2Start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XrP-Jq-vhZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uu2-2m-5nM">
+                                <rect key="frame" x="251" y="350" width="99" height="30"/>
+                                <state key="normal" title="Thread_Safety">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="safetyBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7NN-ye-RjX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAz-kq-qDp">
+                                <rect key="frame" x="122" y="350" width="57" height="30"/>
+                                <state key="normal" title="Thread1">
+                                    <color key="titleColor" red="0.2713022745" green="0.3575797033" blue="0.1693764009" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="thread1Start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HXR-TT-yI2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqp-Tg-gNm">
+                                <rect key="frame" x="102" y="410" width="97" height="30"/>
+                                <state key="normal" title="Thread1_Stop">
+                                    <color key="titleColor" red="0.2713022745" green="0.3575797033" blue="0.1693764009" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stop1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HAz-9c-w5U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qbe-sz-Awk">
+                                <rect key="frame" x="402" y="410" width="97" height="30"/>
+                                <state key="normal" title="Thread2_Stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stop2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JaK-lz-FPC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cqp-Tg-gNm" firstAttribute="centerY" secondItem="Qbe-sz-Awk" secondAttribute="centerY" id="C1O-N8-X33"/>
+                            <constraint firstItem="ARY-IF-Xr8" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" multiplier="0.5" id="ERw-2E-P5V"/>
+                            <constraint firstItem="pf5-Yy-oM8" firstAttribute="height" secondItem="ARY-IF-Xr8" secondAttribute="height" id="FUm-b4-hjB"/>
+                            <constraint firstItem="ARY-IF-Xr8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" multiplier="0.5" id="G0J-Gs-2Kf"/>
+                            <constraint firstItem="xAz-kq-qDp" firstAttribute="centerY" secondItem="uu2-2m-5nM" secondAttribute="centerY" id="MjP-kF-kw7"/>
+                            <constraint firstItem="xAz-kq-qDp" firstAttribute="centerX" secondItem="cqp-Tg-gNm" secondAttribute="centerX" id="NCD-fu-Ow4"/>
+                            <constraint firstItem="xAz-kq-qDp" firstAttribute="top" secondItem="ARY-IF-Xr8" secondAttribute="bottom" constant="50" id="OGB-D0-sKD"/>
+                            <constraint firstItem="pf5-Yy-oM8" firstAttribute="leading" secondItem="ARY-IF-Xr8" secondAttribute="trailing" id="TsW-aY-6Ar"/>
+                            <constraint firstItem="xAz-kq-qDp" firstAttribute="centerX" secondItem="ARY-IF-Xr8" secondAttribute="centerX" id="cIG-1c-Zzo"/>
+                            <constraint firstItem="ARY-IF-Xr8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ezz-A0-nzD"/>
+                            <constraint firstItem="GVZ-a3-vTN" firstAttribute="top" secondItem="pf5-Yy-oM8" secondAttribute="bottom" constant="50" id="ftt-Tm-661"/>
+                            <constraint firstItem="pf5-Yy-oM8" firstAttribute="width" secondItem="ARY-IF-Xr8" secondAttribute="width" id="g0p-Mu-25H"/>
+                            <constraint firstItem="pf5-Yy-oM8" firstAttribute="centerY" secondItem="ARY-IF-Xr8" secondAttribute="centerY" id="nRe-Gd-itC"/>
+                            <constraint firstItem="y3c-jy-aDJ" firstAttribute="top" secondItem="ARY-IF-Xr8" secondAttribute="top" id="raX-k3-QL8"/>
+                            <constraint firstItem="GVZ-a3-vTN" firstAttribute="centerX" secondItem="Qbe-sz-Awk" secondAttribute="centerX" id="sXk-mB-mRv"/>
+                            <constraint firstAttribute="centerX" secondItem="uu2-2m-5nM" secondAttribute="centerX" id="tR6-4h-8gM"/>
+                            <constraint firstItem="cqp-Tg-gNm" firstAttribute="top" secondItem="xAz-kq-qDp" secondAttribute="bottom" constant="30" id="umo-0v-UKI"/>
+                            <constraint firstItem="GVZ-a3-vTN" firstAttribute="centerX" secondItem="pf5-Yy-oM8" secondAttribute="centerX" id="wKK-2N-NAd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="counter1Lb" destination="ARY-IF-Xr8" id="d1r-4L-nkA"/>
+                        <outlet property="counter2Lb" destination="pf5-Yy-oM8" id="54A-4p-am4"/>
+                        <outlet property="safetyBtn" destination="uu2-2m-5nM" id="fcM-Tz-68S"/>
+                        <outlet property="stop1Btn" destination="cqp-Tg-gNm" id="RbT-Ii-UL7"/>
+                        <outlet property="stop2Btn" destination="Qbe-sz-Awk" id="Wc8-r6-97x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
